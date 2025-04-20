@@ -1,0 +1,223 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Shared styles */
+* {
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* global variables */
+:root {
+    --green-500: hsl(158, 36%, 37%);
+    --green-700: hsl(158, 42%, 18%);
+    --black: hsl(212, 21%, 14%);
+    --gray: hsl(228, 12%, 48%);
+    --cream: hsl(30, 38%, 92%);
+
+    --primary-font: "Montserrat";
+    --secondary-font: "Fraunces";
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--cream);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 450px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, .1);
+}
+
+.product-picture {
+    height: 100%;
+    width: 50%;
+    object-fit: fill;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.mobile {
+    display: none;
+}
+
+.content {
+    height: 100%;
+    width: 50%;
+    padding: 30px 0;
+    padding-left: 24px;
+}
+
+.type {
+    font-family: var(--primary-font);
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.name {
+    width: 200px;
+    font-family: var(--secondary-font);
+    color: var(--black);
+    line-height: 1;
+    margin-bottom: 28px;
+}
+
+.description {
+    width: 225px;
+    font-family: var(--primary-font);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.7;
+    color: var(--gray);
+    margin-bottom: 28px;
+}
+
+.pricing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.price {
+    font-family: var(--primary-font);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gray);
+    text-decoration: line-through;
+    margin-left: 18px;
+}
+
+.discount {
+    font-family: var(--secondary-font);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--green-500);
+}
+
+.add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 44px;
+    border-radius: 8px;
+    font-family: var(--primary-font);
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    background-color: var(--green-500);
+    cursor: pointer;
+    transition: background-color .25s ease-in;
+}
+
+.add img {
+    width: 14px;
+    height: 14px;
+    margin: 0 10px;
+}
+
+.add:hover {
+    background-color: var(--green-700);
+}
+
+@media only screen and (max-width: 605px) {
+    .container {
+        width: 60vw;
+        height: 85vh;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .product-picture,
+    .content {
+        width: 100%;
+    }
+
+    .product-picture {
+        height: 40%;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: inherit;
+    }
+
+    .content {
+        height: 60%;
+    }
+
+    .content {
+        padding: 20px 0;
+        padding-left: 20px;
+    }
+
+    .content {
+        height: 65%;
+    }
+
+    .type {
+        margin-bottom: 12px;
+    }
+
+    .name {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .description {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .pricing {
+        margin-bottom: 12px;
+    }
+
+    .add {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 500px) {
+    .container {
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 90vw;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .container {
+        height: 90vh;
+    }
+
+    .product-picture {
+        height: 35%;
+    }
+
+    .content {
+        height: 65%;
+    }
+}
